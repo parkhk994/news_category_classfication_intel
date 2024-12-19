@@ -22,7 +22,7 @@ for i in range(6):
     # 선택한 제목 태그에서 텍스트 추출
     for title_tag in title_tags:
         title = title_tag.text  # 제목 텍스트 추출
-        title = re.compile('[^가-힣 ]').sub(' ', title)  # 한글과 공백을 제외한 문자 제거
+        title = re.compile('[^가-힣 ]').sub('', title)  # 한글과 공백을 제외한 문자 제거
         titles.append(title)  # 정제된 제목을 리스트에 추가
 
     # 제목 리스트를 데이터프레임으로 변환
